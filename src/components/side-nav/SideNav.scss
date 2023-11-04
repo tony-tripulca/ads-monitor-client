@@ -1,0 +1,80 @@
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+.side-nav-holder {
+  top: 0;
+  min-width: 256px;
+  height: 100%;
+  background-color: #1a237e;
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+  color: white;
+  z-index: 1050;
+
+  .logo-holder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(256px - 48px);
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+    img {
+      display: block;
+      width: 42px;
+    }
+
+    .MuiTypography-root {
+      margin-left: 8px;
+    }
+  }
+
+  .side-menu-holder {
+    .menu-label {
+      padding-top: 16px;
+      padding-bottom: 16px;
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .MuiList-root {
+      .MuiListItemButton-root {
+        transition: all 0.2s ease-in-out;
+
+        .MuiSvgIcon-root {
+          color: white;
+        }
+
+        .MuiListItemIcon-root {
+          min-width: 32px;
+        }
+
+        &:hover {
+          padding-left: 10px;
+          background-color: rgba(255, 255, 255, 0.2);
+        }
+      }
+    }
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+}

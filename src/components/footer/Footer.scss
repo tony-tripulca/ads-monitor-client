@@ -1,0 +1,14 @@
+.footer-holder {
+  bottom: 0;
+  min-width: 256px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: #0d3058;
+
+  .MuiTypography-root {
+    padding-top: 8px;
+    font-size: 0.8rem;
+    color: white;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+}

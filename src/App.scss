@@ -16,3 +16,245 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+#main-nav {
+  .menu-button.MuiIconButton-root {
+    position: fixed;
+    top: 8px;
+    left: 8px;
+    z-index: 1150;
+  }
+}
+
+#side-nav {
+  margin-left: -256px;
+  transition: all 0.2s ease-in-out;
+
+  &.active {
+    margin-left: 0px;
+  }
+}
+
+#main-content {
+  width: 100%;
+  padding-top: 86px;
+  padding-bottom: 68px;
+}
+
+#footer {
+  margin-left: -256px;
+  transition: all 0.2s ease-in-out;
+
+  &.active {
+    margin-left: 0px;
+  }
+}
+
+.pills {
+  display: inline;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border-radius: 12px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+
+  &.pills-red {
+    background-color: red;
+    color: white;
+  }
+
+  &.pills-orange {
+    background-color: orange;
+    color: black;
+  }
+
+  &.pills-green {
+    background-color: green;
+    color: white;
+  }
+}
+
+.fab-holder {
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
+
+  .MuiFab-root {
+    margin-right: 8px;
+
+    .MuiSvgIcon-root {
+      margin-right: 4px;
+    }
+  }
+}
+
+.loader-backdrop {
+  position: relative;
+  overflow-y: hidden;
+
+  &::before {
+    content: "";
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1080;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  &::after {
+    content: "";
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1080;
+    width: 0;
+    height: 100%;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.3);
+    animation: loaderAnimation 1s infinite;
+  }
+
+  &.active {
+    &::before {
+      content: "";
+      display: block;
+    }
+    &::after {
+      content: "";
+      display: block;
+    }
+  }
+
+  @keyframes loaderAnimation {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+}
+
+.MuiModal-root {
+  .default-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 2px solid rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    padding: 4px;
+
+    .modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px;
+
+      .modal-title {
+        margin-top: 4px;
+        font-size: 1.2rem;
+      }
+    }
+
+    .modal-body {
+      max-height: 352px;
+      overflow-y: scroll;
+      padding: 16px;
+    }
+
+    .modal-footer {
+      display: flex;
+      justify-content: space-between;
+      width: 168px;
+      padding: 16px;
+      margin-left: auto;
+    }
+  }
+}
+
+.MuiTypography-root.section-title {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.MuiTypography-root.section-description {
+  margin-bottom: 16px;
+  color: gray;
+}
+
+.MuiTypography-root.section-header {
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+}
+
+.MuiSvgIcon-root.back-button-icon {
+  font-size: 1rem;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  #main-nav {
+    .menu-button.MuiIconButton-root {
+      left: 16px;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .MuiAppBar-root {
+      width: 100%;
+      transition: all 0.2s ease-in-out;
+    }
+
+    &.active {
+      .menu-button.MuiIconButton-root {
+        left: 272px;
+      }
+
+      .MuiAppBar-root {
+        width: calc(100% - 256px);
+      }
+    }
+  }
+
+  #main-content {
+    margin-left: 0;
+    transition: all 0.2s ease-in-out;
+
+    &.active {
+      width: calc(100% - 256px);
+      margin-left: 256px;
+    }
+  }
+
+  .MuiModal-root {
+    .default-modal {
+      &.small {
+        width: 40%;
+      }
+    }
+  }
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+}
