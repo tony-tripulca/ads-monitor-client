@@ -79,15 +79,15 @@ function customTheme() {
     },
     palette: {
       primary: {
-        light: "#002950",
-        main: "#001529",
-        dark: "#001122",
+        light: "#c6a0d2",
+        main: "#c88bdb",
+        dark: "#bd63d8",
         contrastText: "white",
       },
       secondary: {
-        light: "#3a4ef1",
-        main: "#283fff",
-        dark: "#192edf",
+        light: "#280457",
+        main: "#160230",
+        dark: "#160230",
         contrastText: "white",
       },
       plain: {

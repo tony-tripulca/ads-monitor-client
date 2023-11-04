@@ -14,7 +14,7 @@ import AdsClickIcon from "@mui/icons-material/AdsClick";
 import SettingsIcon from "@mui/icons-material/Settings";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 
-import ImacLogo from "../../assets/imac_white.png";
+import MhcLogo from "../../assets/mhc_logo.png";
 
 import URL from "../../config/url";
 
@@ -55,8 +55,7 @@ function SideNav() {
     <Box className="side-nav-holder" position="fixed">
       <Container maxWidth="false">
         <Box className="logo-holder">
-          <Box component="img" alt="RMC Logo" src={ImacLogo} />
-          <Typography>Ads Monitoring</Typography>
+          <Box component="img" alt="RMC Logo" src={MhcLogo} />
         </Box>
         <Box className="side-menu-holder">
           <Typography className="menu-label">MENU</Typography>
