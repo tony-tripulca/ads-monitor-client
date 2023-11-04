@@ -7,7 +7,7 @@ function MainNav() {
     <AppBar position="fixed" className="main-nav-holder" color="plain">
       <Container maxWidth="false">
         <Box className="main-menu-holder">
-          <Typography>Ads Monitoring</Typography>
+          <Typography>{window.location.pathname}</Typography>
         </Box>
       </Container>
     </AppBar>
