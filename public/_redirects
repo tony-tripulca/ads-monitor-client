@@ -1,0 +1,2 @@
+/server/* http://ec2-13-215-50-187.ap-southeast-1.compute.amazonaws.com/:splat 200
+/* /index.html 200
