@@ -9,6 +9,7 @@ function AppRouter() {
       {dashboard()}
 
       {/* Fallback */}
+      <Route exact path="/" element={<Navigate to="/ads" />} />
       <Route exact path="*" element={<Navigate to="/" />} />
     </Routes>
   );
@@ -17,7 +18,6 @@ function AppRouter() {
 function dashboard() {
   return (
     <React.Fragment>
-      <Route exact path="/" element={<Navigate to="/ads" />} />
       <Route exact path="/ads" element={<Ads />} />
     </React.Fragment>
   );
